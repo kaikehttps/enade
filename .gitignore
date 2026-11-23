@@ -1,0 +1,12 @@
+segredos/
+.env*
+!.env.example
+__pycache__/
+*.pyc
+*.keytab
+*.key
+acervo/
+.venv/
+vendor/
+
+amostras/falha.jsonl

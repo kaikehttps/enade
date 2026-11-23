@@ -1,0 +1,42 @@
+{
+  "ano": 2021,
+  "curso": "Administração",
+  "area": "Ciências Sociais Aplicadas",
+  "caderno": "didático",
+  "arquivo": "didatico-2.pdf",
+  "arquivo_gabarito": "didatico-2-gb.pdf",
+  "pdf": "didatico-2.pdf",
+  "questoes": {
+    "1": {
+      "componente": "FG",
+      "competencias": [
+        "Ética profissional"
+      ],
+      "objetos": [
+        "Ética profissional"
+      ]
+    },
+    "2": {
+      "componente": "CE",
+      "competencias": [
+        "Ética profissional"
+      ],
+      "objetos": [
+        "Ética profissional"
+      ]
+    },
+    "3": {
+      "componente": "CE",
+      "competencias": [
+        "Interpretar indicadores"
+      ],
+      "objetos": [
+        "Interpretar indicadores"
+      ],
+      "formula_fracao": [
+        "18",
+        "18+12"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "alvo": "http://127.0.0.1:8137",
+  "clientes": 4,
+  "n_por_fase": 100,
+  "observacao": "As consultas únicas têm resultado vazio. A medição inclui HTTP, autenticação da sessão e serialização.",
+  "fria": {
+    "p50_ms": 4.067530999918745,
+    "p95_ms": 5.108409999820651,
+    "p99_ms": 6.018593000135297,
+    "hits": 0
+  },
+  "quente": {
+    "p50_ms": 2.931680000074266,
+    "p95_ms": 4.035894000026019,
+    "p99_ms": 4.526387999931103,
+    "hits": 100
+  },
+  "etica": {
+    "resultados": 4,
+    "hits": 100,
+    "p50_ms": 3.5861800001839583,
+    "p95_ms": 4.536723000001075,
+    "p99_ms": 5.470221000223319
+  }
+}

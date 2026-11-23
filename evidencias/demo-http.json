@@ -1,0 +1,83 @@
+[
+  {
+    "titulo": "Ambiente de demonstração",
+    "requisicao": "GET /api/saude",
+    "resposta": {
+      "modo": "local",
+      "questoes": 6
+    },
+    "legenda": "Seis questões extraídas de dois cadernos didáticos. O adaptador local usa SQLite e cache em memória."
+  },
+  {
+    "titulo": "Entrada como estudante",
+    "requisicao": "POST /api/login",
+    "resposta": {
+      "usuario": "estudante",
+      "perfil": "estudante"
+    },
+    "legenda": "O servidor associa o perfil à sessão. As credenciais são omitidas na gravação."
+  },
+  {
+    "titulo": "Uma busca, dois cursos",
+    "requisicao": "GET /api/busca?q=ética",
+    "resposta": {
+      "total": 4,
+      "cursos": [
+        "Administração",
+        "Sistemas de Informação"
+      ],
+      "gabarito presente": false,
+      "X-Cache": "miss"
+    },
+    "legenda": "A consulta encontra questões de Administração e Sistemas de Informação. O perfil de estudante recebe os enunciados."
+  },
+  {
+    "titulo": "Repetição da consulta",
+    "requisicao": "GET /api/busca?q=ética",
+    "resposta": {
+      "status": 200,
+      "X-Cache": "hit"
+    },
+    "legenda": "O cabeçalho confirma o reaproveitamento da resposta. No cluster, o mesmo serviço usa Redis."
+  },
+  {
+    "titulo": "Questão adicionada",
+    "requisicao": "PUT /api/lista/{id}  →  GET /api/lista",
+    "resposta": {
+      "itens": 1,
+      "numero": 1,
+      "curso": "Sistemas de Informação"
+    },
+    "legenda": "A lista pertence à sessão do estudante."
+  },
+  {
+    "titulo": "Acesso negado ao estudante",
+    "requisicao": "GET /api/exportar",
+    "resposta": {
+      "HTTP": 403,
+      "detail": "Acesso exclusivo de professor"
+    },
+    "legenda": "A restrição ocorre na API. Abrir a rota diretamente também devolve 403."
+  },
+  {
+    "titulo": "Exportação do professor",
+    "requisicao": "GET /api/exportar",
+    "resposta": {
+      "HTTP": 200,
+      "numero": 1,
+      "gabarito": "B",
+      "pdf": "didatico-1.pdf",
+      "pagina": 1
+    },
+    "legenda": "A exportação JSON leva a resposta e a página do caderno. A sessão do professor tem lista própria."
+  },
+  {
+    "titulo": "Painel analítico",
+    "requisicao": "GET /api/analises",
+    "resposta": {
+      "Sistemas de Informação": 3,
+      "Administração": 3
+    },
+    "legenda": "O professor consulta a distribuição por curso. O endpoint também agrega competência e ano."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "ano": 2021,
+  "curso": "Sistemas de Informação",
+  "area": "Tecnologia",
+  "caderno": "didático",
+  "arquivo": "didatico-1.pdf",
+  "arquivo_gabarito": "didatico-1-gb.pdf",
+  "pdf": "didatico-1.pdf",
+  "questoes": {
+    "1": {
+      "componente": "FG",
+      "competencias": [
+        "Ética profissional"
+      ],
+      "objetos": [
+        "Ética profissional"
+      ]
+    },
+    "2": {
+      "componente": "CE",
+      "competencias": [
+        "Projetar sistemas"
+      ],
+      "objetos": [
+        "Projetar sistemas"
+      ]
+    },
+    "D1": {
+      "componente": "CE",
+      "competencias": [
+        "Ética profissional"
+      ],
+      "objetos": [
+        "Ética profissional"
+      ]
+    }
+  }
+}
